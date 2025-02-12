@@ -4,20 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fishy Fortune Teller</title>
-
-    <!-- Load video game styled font -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
-    <!-- Link external CSS file -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>🐟 Fishy Fortune Teller 🐟</h1>
     <div id="bubble-container">
-        <img id="speech-bubble" src="{{ url_for('static', filename='speech_bubble.png') }}" alt="Speech Bubble">
-        <p id="fortune-text">{{ fortune }}</p>
+        <img id="speech-bubble" src="speech_bubble.png" alt="Speech Bubble">
+        <p id="fortune-text"></p>
     </div>
     <br>
-    <button onclick="window.location.reload();">Get New Fortune</button>
+    <button onclick="getNewFortune()">Get New Fortune</button>
+
+    <script>
+        const fortunes = [
+            "Today you are like a goldfish—easily distracted but strangely content.",
+            "Something smells fishy... oh wait, it’s just your life choices catching up with you.",
+            "Like a catfish, someone may be pretending to be something they’re not.",
+            "You will have a deep and meaningful conversation today... with a shrimp cocktail.",
+            "Like a flounder, you may feel a little flat today. Just flop around until things improve.",
+            "Your luck is as rare as a lobster winning the lottery, but hey, anything is possible!",
+            "Someone in your life is acting like a pufferfish—lots of air, no real substance.",
+            "The stars say you should be more like a jellyfish—drift aimlessly and sting people who annoy you.",
+            "An exciting adventure awaits! Or maybe you’ll just stare at a fish tank for an hour.",
+            "Like a clownfish, you may feel funny today. Whether anyone else laughs is another matter.",
+            "You are swimming into a sea of opportunity—just watch out for the sharks.",
+            "Like a guppy in a big pond, you may feel small, but you have great potential.",
+            "Don’t take the bait—some opportunities are just shiny hooks in disguise.",
+            "A wise fish knows when to go with the flow and when to swim against the current.",
+            "Like an octopus, you may need to juggle many things today—but you’ve got this!",
+            "Beware of smooth talkers; even the prettiest fish can have the sharpest teeth.",
+            "You’re about to reel in something amazing—keep casting your net!",
+            "Like a flying fish, you may find yourself in unexpected places soon.",
+            "Sometimes, you have to dive deep to find the real treasure.",
+            "The tide is changing—embrace the new currents ahead.",
+            "A little patience goes a long way. Even a slow fish gets to the ocean.",
+            "You are as adaptable as a clownfish—go where life takes you!",
+            "Beware of eels in disguise; not everyone is as friendly as they seem.",
+            "Like a school of fish, teamwork will bring you success today.",
+            "Your dreams are like a pearl—hidden now, but waiting to shine.",
+            "It’s time to shed your old scales and embrace a fresh start.",
+            "Don’t be afraid to leave the fishbowl—there’s a whole ocean waiting for you.",
+            "An old friend may swim back into your life—welcome them with open fins.",
+            "Keep your eyes open—fortune lurks beneath the surface.",
+            "Like a jellyfish, some problems are best handled by floating through them.",
+            "A golden fish will bring golden opportunities—keep looking!",
+            "The best fish in the sea may already be by your side.",
+            "Sometimes, you just need to drift and let the waves guide you.",
+            "An unexpected wave may change your course—trust it.",
+            "Don't let small fish get you down—big catches are coming.",
+            "You will soon find yourself in deep water—but you are ready.",
+            "Like a starfish, you have the power to heal and grow.",
+            "Not every tide brings treasure, but every wave brings wisdom.",
+            "Like a barracuda, strike when the time is right!",
+            "Someone in your life is like a pufferfish—full of hot air but harmless.",
+            "The ocean of life is vast—don’t be afraid to explore beyond the reef.",
+            "Your future is as bright as a bioluminescent fish.",
+            "A crabby attitude won’t help—stay positive!",
+            "The best catches come to those who wait—be patient.",
+            "Like a salmon, you may have to fight upstream, but it will be worth it.",
+            "Keep your mind as open as the deep sea—you never know what you’ll find.",
+            "Some fish travel alone, some in schools—find what suits you best.",
+            "Don’t just skim the surface — dive deep into new experiences.",
+            "Your destiny is written in the waves — watch for the signs.",
+            "Like a seahorse, staying calm will help you ride life’s storms.",
+            "Be careful who you trust — not every shiny fish is friendly.",
+            "A splash of creativity will take you far today.",
+            "Like a turtle, slow and steady will get you where you need to be.",
+            "Beware of a red herring—it may lead you away from the truth.",
+            "The tides of fortune are shifting in your favor.",
+            "You are more than a small fish in a big pond — own your space.",
+            "A wave of luck is coming — ride it while you can!",
+            "Like a hermit crab, it may be time to find a new shell.",
+            "Sometimes, you just need to float and trust the ocean’s rhythm.",
+            "Your life is an aquarium — make sure you like what’s inside!"
+        ];
+
+        function getNewFortune() {
+            const randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+            document.getElementById("fortune-text").innerText = randomFortune;
+        }
+
+        // Show a fortune when the page loads
+        window.onload = getNewFortune;
+    </script>
 </body>
 </html>
