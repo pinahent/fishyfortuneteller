@@ -19,7 +19,7 @@ h1 {
     top: 60%;  /* Moves the title higher */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 26px;  /* Makes the title smaller */
+    font-size: 30px;  /* Makes the title smaller */
     font-weight: normal;  /* Removes bold styling */
     color: white;
 }
@@ -34,7 +34,7 @@ h1 {
 
 /* Speech bubble image */
 #speech-bubble {
-    width: 320px; /* Slightly bigger */
+    width: 420px; /* Slightly bigger */
 }
 
 /* Center the fortune text inside the speech bubble */
@@ -45,7 +45,7 @@ h1 {
     transform: translate(-50%, -50%);
     width: 70%;
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: normal;
     color: black;
 }
