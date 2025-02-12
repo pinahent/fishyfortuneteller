@@ -5,32 +5,33 @@
 
 body {
   background-image: url("background.png");
-  background-size: cover; /* Cover the entire background */
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   font-family: 'Press Start 2P', sans-serif;
-  display: flex; /* Use Flexbox for layout */
-  flex-direction: column; /* Stack elements vertically */
-  align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically */
-  min-height: 100vh; /* Ensure full viewport height */
-  margin: 0; /* Remove default margins */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  text-align: center; /* Center text within elements */
 }
 
 h1 {
-  font-size: 1.5rem; /* Use rem for font sizing */
+  font-size: 2rem; /* Larger title on desktop */
   color: white;
-  margin-bottom: 20px; /* Add some space below the title */
+  margin-bottom: 20px;
 }
 
 #bubble-container {
   position: relative;
-  width: 80%; /* Make bubble container responsive */
-  max-width: 400px; /* Set a maximum width */
+  width: 50%; /* Adjust width for desktop */
+  max-width: 500px; /* Set a maximum width */
 }
 
 #speech-bubble {
-  width: 100%; /* Make the bubble fill the container */
+  width: 100%;
 }
 
 #fortune-text {
@@ -40,36 +41,61 @@ h1 {
   transform: translate(-50%, -50%);
   width: 80%;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.2rem; /* Larger text on desktop */
   color: black;
 }
 
 button {
   margin-top: 20px;
   padding: 10px 20px;
-  font-size: 1rem;
+  font-size: 1.2rem; /* Larger button text on desktop */
   cursor: pointer;
   background-color: white;
   border: none;
   border-radius: 5px;
 }
 
-@media (max-width: 768px) {
+/* Media query for smaller screens (phones) */
+@media (max-width: 767px) {  /* Adjust breakpoint for phones */
   h1 {
-    font-size: 1.2rem; /* Slightly smaller on phones */
+    font-size: 1.5rem; /* Smaller title on phones */
     margin-bottom: 15px;
   }
 
   #bubble-container {
-    width: 90%; /* Make bubble container wider on phones */
-    max-width: 350px; /* Adjust maximum width for phones */
+    width: 90%; /* Make bubble wider on phones */
+    max-width: 400px; /* Adjust maximum width for phones */
   }
 
   #fortune-text {
-    font-size: 0.9rem; /* Smaller text on phones */
+    font-size: 1rem; /* Smaller text on phones */
   }
 
   button {
-    font-size: 0.9rem; /* Smaller button text */
+    font-size: 1rem; /* Smaller button text */
+  }
+}
+
+/* Media query for larger screens (desktops) - Optional but useful */
+@media (min-width: 768px) { /* Adjust breakpoint for desktops */
+  body {
+    /* You can add specific desktop styles here if needed */
+  }
+
+  h1 {
+    font-size: 2rem; /* Larger title on desktop */
+  }
+
+  #bubble-container {
+    width: 60%; /* Adjust width for desktop */
+    max-width: 600px;
+  }
+
+  #fortune-text {
+    font-size: 1.2rem; /* Larger text on desktop */
+  }
+
+  button {
+    font-size: 1.2rem; /* Larger button text on desktop */
   }
 }
