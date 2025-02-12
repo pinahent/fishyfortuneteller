@@ -62,21 +62,32 @@ button {
     border-radius: 5px;
 }
 
+/* Media query for smaller screens (e.g., tablets and phones) */
 @media (max-width: 768px) {
-  /* ... (Other styles) ... */
+  body {
+    font-size: 14px;
+    background-size: 100%; /* Or 'contain', 'auto', etc. */
+  }
 
   h1 {
-    top: 52%; /* Slightly higher */
+    font-size: 18px;
+    top: 55%;
   }
 
   #bubble-container {
-    left: 51%; /* Slightly to the right */
-    top: -98px; /* Slightly higher */
+    left: 50%;
+    transform: translateX(-50%);
+    top: -100px;
+  }
+
+  #speech-bubble {
+    width: 90%;
   }
 
   #fortune-text {
-    left: 52%; /* Adjust text position */
-    top: 42%;  /* Adjust text position */
+    font-size: 12px;
   }
+
+  /* ... other adjustments for smaller screens ... */
 }
 
