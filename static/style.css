@@ -19,7 +19,7 @@ h1 {
     top: 60%;  /* Moves the title higher */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 22px;  /* Makes the title smaller */
+    font-size: 26px;  /* Makes the title smaller */
     font-weight: normal;  /* Removes bold styling */
     color: white;
 }
@@ -28,7 +28,7 @@ h1 {
 #bubble-container {
     position: relative;
     display: inline-block;
-    top: -1300px; /* Move bubble higher */
+    top: -130px; /* Move bubble higher */
     left: 120px; /* Move bubble slightly to the right */
 }
 
