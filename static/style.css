@@ -16,7 +16,7 @@ body {
 /* Title text is white */
 h1 {
     position: absolute;
-    top: 60%;  /* Moves the title higher */
+    top: 75%;  /* Moves the title higher */
     left: 50%;
     transform: translateX(-50%);
     font-size: 30px;  /* Makes the title smaller */
@@ -28,8 +28,8 @@ h1 {
 #bubble-container {
     position: relative;
     display: inline-block;
-    top: -130px; /* Move bubble higher */
-    left: 120px; /* Move bubble slightly to the right */
+    top: -160px; /* Move bubble higher */
+    left: 140px; /* Move bubble slightly to the right */
 }
 
 /* Speech bubble image */
@@ -45,8 +45,8 @@ h1 {
     transform: translate(-50%, -50%);
     width: 70%;
     text-align: center;
-    font-size: 16px;
-    font-weight: normal;
+    font-size: 18px;
+    font-weight: bold;
     color: black;
 }
 
