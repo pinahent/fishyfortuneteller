@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fishy Fortune Teller</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
     <h1>🐟 Fishy Fortune Teller 🐟</h1>
     <div id="bubble-container">
-        <img id="speech-bubble" src="speech_bubble.png" alt="Speech Bubble">
-        <p id="fortune-text"></p>
+        <img id="speech-bubble" src="static/speech_bubble.png" alt="Speech Bubble">
+        <p id="fortune-text">{{ fortune }}</p>
     </div>
     <br>
-    <button onclick="getNewFortune()">Get New Fortune</button>
+    <button onclick="window.location.reload()">Get New Fortune</button>
 
     <script>
         const fortunes = [
