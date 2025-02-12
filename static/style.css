@@ -10,24 +10,26 @@ body {
   background-position: center;
   font-family: 'Press Start 2P', sans-serif;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column; /* Elements stack vertically */
+  align-items: center; /* Center horizontally */
   min-height: 100vh;
   margin: 0;
-  text-align: center; /* Center text within elements */
-}
-
-h1 {
-  font-size: 2rem; /* Larger title on desktop */
-  color: white;
-  margin-bottom: 20px;
+  padding: 20px; /* Add padding around the background */
+  background-color: white; /* Set background color for padding */
+}.content-wrapper {  /* New wrapper for centering content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Take full width within padding */
+  max-width: 960px; /* Set a maximum width if needed */
 }
 
 #bubble-container {
   position: relative;
-  width: 50%; /* Adjust width for desktop */
-  max-width: 500px; /* Set a maximum width */
+  width: 60%; /* Adjust width as needed */
+  max-width: 400px; /* Set maximum width */
+  margin-top: 20px; /* Add space at the top */
+  align-self: flex-start; /* Align to the left */
 }
 
 #speech-bubble {
@@ -41,61 +43,44 @@ h1 {
   transform: translate(-50%, -50%);
   width: 80%;
   text-align: center;
-  font-size: 1.2rem; /* Larger text on desktop */
+  font-size: 1rem;
   color: black;
 }
 
 button {
   margin-top: 20px;
   padding: 10px 20px;
-  font-size: 1.2rem; /* Larger button text on desktop */
+  font-size: 1rem;
   cursor: pointer;
   background-color: white;
   border: none;
   border-radius: 5px;
 }
 
-/* Media query for smaller screens (phones) */
-@media (max-width: 767px) {  /* Adjust breakpoint for phones */
-  h1 {
-    font-size: 1.5rem; /* Smaller title on phones */
-    margin-bottom: 15px;
-  }
-
-  #bubble-container {
-    width: 90%; /* Make bubble wider on phones */
-    max-width: 400px; /* Adjust maximum width for phones */
-  }
-
-  #fortune-text {
-    font-size: 1rem; /* Smaller text on phones */
-  }
-
-  button {
-    font-size: 1rem; /* Smaller button text */
-  }
+h1 {
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 20px; /* Space above the title */
 }
 
-/* Media query for larger screens (desktops) - Optional but useful */
-@media (min-width: 768px) { /* Adjust breakpoint for desktops */
-  body {
-    /* You can add specific desktop styles here if needed */
+/* Media query for smaller screens (phones) */
+@media (max-width: 767px) {
+  #bubble-container {
+    width: 80%; /* Adjust width for phones */
+    max-width: 350px;
+    margin-top: 10px; /* Adjust spacing */
   }
 
   h1 {
-    font-size: 2rem; /* Larger title on desktop */
-  }
-
-  #bubble-container {
-    width: 60%; /* Adjust width for desktop */
-    max-width: 600px;
-  }
-
-  #fortune-text {
-    font-size: 1.2rem; /* Larger text on desktop */
+    font-size: 1.2rem;
+    margin-top: 15px; /* Adjust spacing */
   }
 
   button {
-    font-size: 1.2rem; /* Larger button text on desktop */
+    font-size: 0.9rem;
+  }
+
+  #fortune-text {
+    font-size: 0.9rem;
   }
 }
