@@ -62,31 +62,27 @@ button {
     border-radius: 5px;
 }
 
-/* Media query for smaller screens (e.g., tablets and phones) */
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-    background-size: 100%; /* Or 'contain', 'auto', etc. */
-  }
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  /* ... (Your existing media query styles) ... */
 
   h1 {
-    font-size: 18px;
-    top: 55%;
+    top: 53%; /* Adjust this value to move the title higher */
+    /* ... other h1 styles ... */
   }
 
   #bubble-container {
-    left: 50%;
-    transform: translateX(-50%);
-    top: -100px;
+    left: 52%; /* Adjust this value to move the bubble to the right */
+    /* You might also want to adjust the top position a bit more */
+    top: -95px; /* Adjust as needed */
+    /* ... other #bubble-container styles ... */
   }
 
-  #speech-bubble {
-    width: 90%;
-  }
-
+  /* If the text inside the bubble needs adjusting: */
   #fortune-text {
-    font-size: 12px;
+    /* You might need to tweak these values depending on the bubble's new position */
+    left: 51%;  /* Adjust as needed */
+    top: 40%; /* Adjust as needed */
   }
-
+}
   /* ... other adjustments for smaller screens ... */
 }
