@@ -3,91 +3,54 @@
   src: url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 }
 
-body {
-  background-image: url("background.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  font-family: 'Press Start 2P', sans-serif;
-  display: flex;
-  flex-direction: column; /* Elements stack vertically */
-  align-items: center; /* Center horizontally */
-  min-height: 100vh;
-  margin: 0;
-  padding: 20px; /* Add padding around the background */
-  background-color: white; /* Set background color for padding */
-}.content-wrapper {  /* New wrapper for centering content */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%; /* Take full width within padding */
-  max-width: 960px; /* Set a maximum width if needed */
+body { 
+    background-image: url("background.png"); 
+    background-size: 90%; /* Increase image size */
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "Press Start 2P", cursive;
+    text-align: center;
+    padding: 50px;
 }
 
-#bubble-container {
-  position: absolute; /* Use absolute positioning for precise placement */
-  top: 20%; /* Adjust top position (higher value = lower) */
-  left: 60%; /* Adjust left position (higher value = more to the right) */
-  transform: translateX(-50%); /* Center horizontally based on the left edge */
-  width: 50%; /* Adjust width as needed */
-  max-width: 400px; /* Set a maximum width */
-}
-
-#speech-bubble {
-  width: 100%;
-}
-
-
-#fortune-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Center both horizontally and vertically */
-  width: 80%;
-  text-align: center;
-  font-size: 1rem;
-  color: black;
-}
-
-#speech-bubble {
-  width: 100%;
-}
-
-
-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  background-color: white;
-  border: none;
-  border-radius: 5px;
-}
-
+/* Title text is white */
 h1 {
-  font-size: 1.5rem;
-  color: white;
-  margin-top: 20px; /* Space above the title */
+    color: white;
 }
 
-/* Media query for smaller screens (phones) */
-@media (max-width: 767px) {
-  #bubble-container {
-    width: 80%; /* Adjust width for phones */
-    max-width: 350px;
-    margin-top: 10px; /* Adjust spacing */
-  }
+/* Speech bubble container */
+#bubble-container {
+    position: relative;
+    display: inline-block;
+    top: -20px; /* Move bubble higher */
+    left: 40px; /* Move bubble slightly to the right */
+}
 
-  h1 {
-    font-size: 1.2rem;
-    margin-top: 15px; /* Adjust spacing */
-  }
+/* Speech bubble image */
+#speech-bubble {
+    width: 420px; /* Slightly bigger */
+}
 
-  button {
-    font-size: 0.9rem;
-  }
+/* Center the fortune text inside the speech bubble */
+#fortune-text {
+    position: absolute;
+    top: 43%; /* Move text slightly higher */
+    left: 53%; /* Shift text to match the new bubble position */
+    transform: translate(-50%, -50%);
+    width: 70%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
 
-  #fortune-text {
-    font-size: 0.9rem;
-  }
+/* Button styling */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: yellow;
+    border: none;
+    border-radius: 5px;
 }
