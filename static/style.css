@@ -8,13 +8,19 @@ body {
     background-size: 90%; /* Increase image size */
     background-repeat: no-repeat;
     background-position: center;
-    font-family: "Press Start 2P", cursive;
+    font-family: 'Press Start 2P', sans-serif;
     text-align: center;
     padding: 50px;
 }
 
 /* Title text is white */
 h1 {
+    position: absolute;
+    top: 70%;  /* Moves the title higher */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;  /* Makes the title smaller */
+    font-weight: normal;  /* Removes bold styling */
     color: white;
 }
 
@@ -22,20 +28,20 @@ h1 {
 #bubble-container {
     position: relative;
     display: inline-block;
-    top: -20px; /* Move bubble higher */
-    left: 40px; /* Move bubble slightly to the right */
+    top: -70px; /* Move bubble higher */
+    left: 60px; /* Move bubble slightly to the right */
 }
 
 /* Speech bubble image */
 #speech-bubble {
-    width: 420px; /* Slightly bigger */
+    width: 320px; /* Slightly bigger */
 }
 
 /* Center the fortune text inside the speech bubble */
 #fortune-text {
     position: absolute;
-    top: 43%; /* Move text slightly higher */
-    left: 53%; /* Shift text to match the new bubble position */
+    top: 23%; /* Move text slightly higher */
+    left: 63%; /* Shift text to match the new bubble position */
     transform: translate(-50%, -50%);
     width: 70%;
     text-align: center;
