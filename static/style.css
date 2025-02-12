@@ -16,10 +16,10 @@ body {
 /* Title text is white */
 h1 {
     position: absolute;
-    top: 70%;  /* Moves the title higher */
+    top: 60%;  /* Moves the title higher */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 20px;  /* Makes the title smaller */
+    font-size: 22px;  /* Makes the title smaller */
     font-weight: normal;  /* Removes bold styling */
     color: white;
 }
@@ -28,8 +28,8 @@ h1 {
 #bubble-container {
     position: relative;
     display: inline-block;
-    top: -70px; /* Move bubble higher */
-    left: 60px; /* Move bubble slightly to the right */
+    top: -1300px; /* Move bubble higher */
+    left: 120px; /* Move bubble slightly to the right */
 }
 
 /* Speech bubble image */
@@ -40,13 +40,13 @@ h1 {
 /* Center the fortune text inside the speech bubble */
 #fortune-text {
     position: absolute;
-    top: 23%; /* Move text slightly higher */
-    left: 63%; /* Shift text to match the new bubble position */
+    top: 38%; /* Move text slightly higher */
+    left: 53%; /* Shift text to match the new bubble position */
     transform: translate(-50%, -50%);
     width: 70%;
     text-align: center;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: normal;
     color: black;
 }
 
@@ -56,7 +56,7 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: yellow;
+    background-color: white;
     border: none;
     border-radius: 5px;
 }
