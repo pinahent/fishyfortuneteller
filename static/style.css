@@ -62,3 +62,31 @@ button {
     border-radius: 5px;
 }
 
+/* Media query for smaller screens (e.g., tablets and phones) */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    background-size: 100%; /* Or 'contain', 'auto', etc. */
+  }
+
+  h1 {
+    font-size: 18px;
+    top: 55%;
+  }
+
+  #bubble-container {
+    left: 50%;
+    transform: translateX(-50%);
+    top: -100px;
+  }
+
+  #speech-bubble {
+    width: 90%;
+  }
+
+  #fortune-text {
+    font-size: 12px;
+  }
+
+  /* ... other adjustments for smaller screens ... */
+}
