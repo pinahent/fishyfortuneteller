@@ -62,27 +62,21 @@ button {
     border-radius: 5px;
 }
 
-@media (max-width: 768px) { /* Adjust breakpoint as needed */
-  /* ... (Your existing media query styles) ... */
+@media (max-width: 768px) {
+  /* ... (Other styles) ... */
 
   h1 {
-    top: 53%; /* Adjust this value to move the title higher */
-    /* ... other h1 styles ... */
+    top: 52%; /* Slightly higher */
   }
 
   #bubble-container {
-    left: 52%; /* Adjust this value to move the bubble to the right */
-    /* You might also want to adjust the top position a bit more */
-    top: -95px; /* Adjust as needed */
-    /* ... other #bubble-container styles ... */
+    left: 51%; /* Slightly to the right */
+    top: -98px; /* Slightly higher */
   }
 
-  /* If the text inside the bubble needs adjusting: */
   #fortune-text {
-    /* You might need to tweak these values depending on the bubble's new position */
-    left: 51%;  /* Adjust as needed */
-    top: 40%; /* Adjust as needed */
+    left: 52%; /* Adjust text position */
+    top: 42%;  /* Adjust text position */
   }
 }
-  /* ... other adjustments for smaller screens ... */
-}
+
