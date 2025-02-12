@@ -25,27 +25,34 @@ body {
 }
 
 #bubble-container {
-  position: relative;
-  width: 60%; /* Adjust width as needed */
-  max-width: 400px; /* Set maximum width */
-  margin-top: 20px; /* Add space at the top */
-  align-self: flex-start; /* Align to the left */
+  position: absolute; /* Use absolute positioning for precise placement */
+  top: 20%; /* Adjust top position (higher value = lower) */
+  left: 60%; /* Adjust left position (higher value = more to the right) */
+  transform: translateX(-50%); /* Center horizontally based on the left edge */
+  width: 50%; /* Adjust width as needed */
+  max-width: 400px; /* Set a maximum width */
 }
 
 #speech-bubble {
   width: 100%;
 }
 
+
 #fortune-text {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /* Center both horizontally and vertically */
   width: 80%;
   text-align: center;
   font-size: 1rem;
   color: black;
 }
+
+#speech-bubble {
+  width: 100%;
+}
+
 
 button {
   margin-top: 20px;
